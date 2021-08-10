@@ -32,6 +32,7 @@ if [ ! -d "${DATADIR}/mysql" ]; then
     crudini --set "$MARIADB_CONF_FILE" mysqld innodb_buffer_pool_size 5M
     crudini --set "$MARIADB_CONF_FILE" mysqld innodb_log_buffer_size 512K
     crudini --set "$MARIADB_CONF_FILE" mysqld user root
+    crudini --set "$MARIADB_CONF_FILE" mysqld port 3307
 
     # Config MariaDB to enable TLS
     if [ -f "$MARIADB_CERT_FILE" ]
