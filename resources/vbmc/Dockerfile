@@ -10,5 +10,6 @@ RUN dnf install -y python3 python3-requests python3-pip && \
      rm -rf /var/cache/{yum,dnf}/*
 
 COPY download-certificates.sh /bin/
+RUN chmod +x /bin/download-certificates.sh
 
 CMD /bin/download-certificates.sh; /usr/bin/vbmcd --foreground
